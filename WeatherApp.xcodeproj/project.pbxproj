@@ -16,12 +16,30 @@
 		E44AAC8B22AB05580072B62D /* WeatherListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44AAC8922AB05580072B62D /* WeatherListViewController.xib */; };
 		E44AAC8D22AB05920072B62D /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAC8C22AB05920072B62D /* WeatherListViewModel.swift */; };
 		E44AACC622AB0CB80072B62D /* Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44AACBD22AB0CB80072B62D /* Location.framework */; };
-		E44AACCD22AB0CB80072B62D /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AACCC22AB0CB80072B62D /* LocationTests.swift */; };
 		E44AACCF22AB0CB80072B62D /* Location.h in Headers */ = {isa = PBXBuildFile; fileRef = E44AACBF22AB0CB80072B62D /* Location.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E44AACD222AB0CB80072B62D /* Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44AACBD22AB0CB80072B62D /* Location.framework */; };
 		E44AACD322AB0CB80072B62D /* Location.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E44AACBD22AB0CB80072B62D /* Location.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E44AACDC22AB0CDB0072B62D /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AACDB22AB0CDB0072B62D /* LocationError.swift */; };
 		E44AACDE22AB0CFD0072B62D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AACDD22AB0CFD0072B62D /* LocationService.swift */; };
+		E44AACED22AB0E150072B62D /* ClientApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44AACE422AB0E150072B62D /* ClientApi.framework */; };
+		E44AACF622AB0E150072B62D /* ClientApi.h in Headers */ = {isa = PBXBuildFile; fileRef = E44AACE622AB0E150072B62D /* ClientApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E44AACF922AB0E150072B62D /* ClientApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44AACE422AB0E150072B62D /* ClientApi.framework */; };
+		E44AACFA22AB0E150072B62D /* ClientApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E44AACE422AB0E150072B62D /* ClientApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E44AAD0322AB0E5D0072B62D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD0222AB0E5D0072B62D /* APIError.swift */; };
+		E44AAD0522AB0E850072B62D /* ClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD0422AB0E850072B62D /* ClientApi.swift */; };
+		E44AAD0822AB0F770072B62D /* DateFormatter+ClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD0722AB0F770072B62D /* DateFormatter+ClientApi.swift */; };
+		E44AAD0A22AB0F950072B62D /* CustomCodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD0922AB0F950072B62D /* CustomCodingKeys.swift */; };
+		E44AAD0D22AB10020072B62D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD0C22AB10020072B62D /* Router.swift */; };
+		E44AAD1022AB14880072B62D /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD0E22AB10B00072B62D /* RouterTests.swift */; };
+		E44AAD1222AB15130072B62D /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1122AB15130072B62D /* LocationTests.swift */; };
+		E44AAD1422AB15E30072B62D /* WeatherApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1322AB15E30072B62D /* WeatherApiClient.swift */; };
+		E44AAD1F22AB166D0072B62D /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1822AB166D0072B62D /* WeatherResponse.swift */; };
+		E44AAD2022AB166D0072B62D /* Nebulosite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1922AB166D0072B62D /* Nebulosite.swift */; };
+		E44AAD2122AB166D0072B62D /* DynamicKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1A22AB166D0072B62D /* DynamicKeys.swift */; };
+		E44AAD2322AB166D0072B62D /* SnowRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1C22AB166D0072B62D /* SnowRisk.swift */; };
+		E44AAD2422AB166D0072B62D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1D22AB166D0072B62D /* Weather.swift */; };
+		E44AAD2522AB166D0072B62D /* Presure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD1E22AB166D0072B62D /* Presure.swift */; };
+		E44AAD2722AB19380072B62D /* WeatherResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAD2622AB19380072B62D /* WeatherResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +71,27 @@
 			remoteGlobalIDString = E44AACBC22AB0CB80072B62D;
 			remoteInfo = Location;
 		};
+		E44AACEE22AB0E150072B62D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E44AAC5822AB025E0072B62D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E44AACE322AB0E150072B62D;
+			remoteInfo = ClientApi;
+		};
+		E44AACF022AB0E150072B62D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E44AAC5822AB025E0072B62D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E44AAC5F22AB025E0072B62D;
+			remoteInfo = WeatherApp;
+		};
+		E44AACF722AB0E150072B62D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E44AAC5822AB025E0072B62D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E44AACE322AB0E150072B62D;
+			remoteInfo = ClientApi;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +101,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E44AACFA22AB0E150072B62D /* ClientApi.framework in Embed Frameworks */,
 				E44AACD322AB0CB80072B62D /* Location.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -86,10 +126,29 @@
 		E44AACBF22AB0CB80072B62D /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		E44AACC022AB0CB80072B62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44AACC522AB0CB80072B62D /* LocationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E44AACCC22AB0CB80072B62D /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		E44AACCE22AB0CB80072B62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44AACDB22AB0CDB0072B62D /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
 		E44AACDD22AB0CFD0072B62D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E44AACE422AB0E150072B62D /* ClientApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClientApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44AACE622AB0E150072B62D /* ClientApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientApi.h; sourceTree = "<group>"; };
+		E44AACE722AB0E150072B62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44AACEC22AB0E150072B62D /* ClientApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44AACF522AB0E150072B62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44AAD0222AB0E5D0072B62D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		E44AAD0422AB0E850072B62D /* ClientApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientApi.swift; sourceTree = "<group>"; };
+		E44AAD0722AB0F770072B62D /* DateFormatter+ClientApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ClientApi.swift"; sourceTree = "<group>"; };
+		E44AAD0922AB0F950072B62D /* CustomCodingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCodingKeys.swift; sourceTree = "<group>"; };
+		E44AAD0C22AB10020072B62D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E44AAD0E22AB10B00072B62D /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		E44AAD1122AB15130072B62D /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		E44AAD1322AB15E30072B62D /* WeatherApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApiClient.swift; sourceTree = "<group>"; };
+		E44AAD1822AB166D0072B62D /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		E44AAD1922AB166D0072B62D /* Nebulosite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nebulosite.swift; sourceTree = "<group>"; };
+		E44AAD1A22AB166D0072B62D /* DynamicKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicKeys.swift; sourceTree = "<group>"; };
+		E44AAD1C22AB166D0072B62D /* SnowRisk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowRisk.swift; sourceTree = "<group>"; };
+		E44AAD1D22AB166D0072B62D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		E44AAD1E22AB166D0072B62D /* Presure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presure.swift; sourceTree = "<group>"; };
+		E44AAD2622AB19380072B62D /* WeatherResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44AACF922AB0E150072B62D /* ClientApi.framework in Frameworks */,
 				E44AACD222AB0CB80072B62D /* Location.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +183,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E44AACE122AB0E150072B62D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44AACE922AB0E150072B62D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E44AACED22AB0E150072B62D /* ClientApi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,7 +205,11 @@
 			isa = PBXGroup;
 			children = (
 				E44AAC6222AB025E0072B62D /* WeatherApp */,
+				E44AAC7722AB025F0072B62D /* WeatherAppTests */,
 				E44AACBE22AB0CB80072B62D /* Location */,
+				E44AACCB22AB0CB80072B62D /* LocationTests */,
+				E44AACE522AB0E150072B62D /* ClientApi */,
+				E44AACF222AB0E150072B62D /* ClientApiTests */,
 				E44AAC6122AB025E0072B62D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +221,8 @@
 				E44AAC7422AB025F0072B62D /* WeatherAppTests.xctest */,
 				E44AACBD22AB0CB80072B62D /* Location.framework */,
 				E44AACC522AB0CB80072B62D /* LocationTests.xctest */,
+				E44AACE422AB0E150072B62D /* ClientApi.framework */,
+				E44AACEC22AB0E150072B62D /* ClientApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,7 +235,6 @@
 				E44AAC8322AB02B20072B62D /* Ressources */,
 				E44AAC6C22AB025F0072B62D /* LaunchScreen.storyboard */,
 				E44AAC6F22AB025F0072B62D /* Info.plist */,
-				E44AAC7722AB025F0072B62D /* WeatherAppTests */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -202,7 +282,6 @@
 				E44AACDD22AB0CFD0072B62D /* LocationService.swift */,
 				E44AACBF22AB0CB80072B62D /* Location.h */,
 				E44AACC022AB0CB80072B62D /* Info.plist */,
-				E44AACCB22AB0CB80072B62D /* LocationTests */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -210,10 +289,73 @@
 		E44AACCB22AB0CB80072B62D /* LocationTests */ = {
 			isa = PBXGroup;
 			children = (
-				E44AACCC22AB0CB80072B62D /* LocationTests.swift */,
 				E44AACCE22AB0CB80072B62D /* Info.plist */,
+				E44AAD1122AB15130072B62D /* LocationTests.swift */,
 			);
 			path = LocationTests;
+			sourceTree = "<group>";
+		};
+		E44AACE522AB0E150072B62D /* ClientApi */ = {
+			isa = PBXGroup;
+			children = (
+				E44AAD0B22AB0FB10072B62D /* Services */,
+				E44AAD0622AB0F620072B62D /* Utils */,
+				E44AAD0122AB0E410072B62D /* Core */,
+				E44AACE622AB0E150072B62D /* ClientApi.h */,
+				E44AACE722AB0E150072B62D /* Info.plist */,
+			);
+			path = ClientApi;
+			sourceTree = "<group>";
+		};
+		E44AACF222AB0E150072B62D /* ClientApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				E44AACF522AB0E150072B62D /* Info.plist */,
+				E44AAD0E22AB10B00072B62D /* RouterTests.swift */,
+				E44AAD2622AB19380072B62D /* WeatherResponseTests.swift */,
+			);
+			path = ClientApiTests;
+			sourceTree = "<group>";
+		};
+		E44AAD0122AB0E410072B62D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E44AAD0222AB0E5D0072B62D /* APIError.swift */,
+				E44AAD0422AB0E850072B62D /* ClientApi.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E44AAD0622AB0F620072B62D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E44AAD0722AB0F770072B62D /* DateFormatter+ClientApi.swift */,
+				E44AAD0922AB0F950072B62D /* CustomCodingKeys.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E44AAD0B22AB0FB10072B62D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E44AAD0C22AB10020072B62D /* Router.swift */,
+				E44AAD1322AB15E30072B62D /* WeatherApiClient.swift */,
+				E44AAD1722AB166D0072B62D /* Weather */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E44AAD1722AB166D0072B62D /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				E44AAD1822AB166D0072B62D /* WeatherResponse.swift */,
+				E44AAD1922AB166D0072B62D /* Nebulosite.swift */,
+				E44AAD1A22AB166D0072B62D /* DynamicKeys.swift */,
+				E44AAD1C22AB166D0072B62D /* SnowRisk.swift */,
+				E44AAD1D22AB166D0072B62D /* Weather.swift */,
+				E44AAD1E22AB166D0072B62D /* Presure.swift */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E44AACCF22AB0CB80072B62D /* Location.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44AACDF22AB0E150072B62D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E44AACF622AB0E150072B62D /* ClientApi.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +393,7 @@
 			);
 			dependencies = (
 				E44AACD122AB0CB80072B62D /* PBXTargetDependency */,
+				E44AACF822AB0E150072B62D /* PBXTargetDependency */,
 			);
 			name = WeatherApp;
 			productName = WeatherApp;
@@ -304,6 +455,43 @@
 			productReference = E44AACC522AB0CB80072B62D /* LocationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E44AACE322AB0E150072B62D /* ClientApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E44AACFB22AB0E150072B62D /* Build configuration list for PBXNativeTarget "ClientApi" */;
+			buildPhases = (
+				E44AACDF22AB0E150072B62D /* Headers */,
+				E44AACE022AB0E150072B62D /* Sources */,
+				E44AACE122AB0E150072B62D /* Frameworks */,
+				E44AACE222AB0E150072B62D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClientApi;
+			productName = ClientApi;
+			productReference = E44AACE422AB0E150072B62D /* ClientApi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E44AACEB22AB0E150072B62D /* ClientApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E44AACFE22AB0E150072B62D /* Build configuration list for PBXNativeTarget "ClientApiTests" */;
+			buildPhases = (
+				E44AACE822AB0E150072B62D /* Sources */,
+				E44AACE922AB0E150072B62D /* Frameworks */,
+				E44AACEA22AB0E150072B62D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E44AACEF22AB0E150072B62D /* PBXTargetDependency */,
+				E44AACF122AB0E150072B62D /* PBXTargetDependency */,
+			);
+			name = ClientApiTests;
+			productName = ClientApiTests;
+			productReference = E44AACEC22AB0E150072B62D /* ClientApiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -327,6 +515,15 @@
 					};
 					E44AACC422AB0CB80072B62D = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+						TestTargetID = E44AAC5F22AB025E0072B62D;
+					};
+					E44AACE322AB0E150072B62D = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					E44AACEB22AB0E150072B62D = {
+						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = E44AAC5F22AB025E0072B62D;
 					};
 				};
@@ -348,6 +545,8 @@
 				E44AAC7322AB025F0072B62D /* WeatherAppTests */,
 				E44AACBC22AB0CB80072B62D /* Location */,
 				E44AACC422AB0CB80072B62D /* LocationTests */,
+				E44AACE322AB0E150072B62D /* ClientApi */,
+				E44AACEB22AB0E150072B62D /* ClientApiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,6 +578,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E44AACC322AB0CB80072B62D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44AACE222AB0E150072B62D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44AACEA22AB0E150072B62D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,7 +632,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44AACCD22AB0CB80072B62D /* LocationTests.swift in Sources */,
+				E44AAD1222AB15130072B62D /* LocationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44AACE022AB0E150072B62D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E44AAD1422AB15E30072B62D /* WeatherApiClient.swift in Sources */,
+				E44AAD0A22AB0F950072B62D /* CustomCodingKeys.swift in Sources */,
+				E44AAD0322AB0E5D0072B62D /* APIError.swift in Sources */,
+				E44AAD2422AB166D0072B62D /* Weather.swift in Sources */,
+				E44AAD1F22AB166D0072B62D /* WeatherResponse.swift in Sources */,
+				E44AAD2522AB166D0072B62D /* Presure.swift in Sources */,
+				E44AAD0D22AB10020072B62D /* Router.swift in Sources */,
+				E44AAD2322AB166D0072B62D /* SnowRisk.swift in Sources */,
+				E44AAD2122AB166D0072B62D /* DynamicKeys.swift in Sources */,
+				E44AAD2022AB166D0072B62D /* Nebulosite.swift in Sources */,
+				E44AAD0522AB0E850072B62D /* ClientApi.swift in Sources */,
+				E44AAD0822AB0F770072B62D /* DateFormatter+ClientApi.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44AACE822AB0E150072B62D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E44AAD1022AB14880072B62D /* RouterTests.swift in Sources */,
+				E44AAD2722AB19380072B62D /* WeatherResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +686,21 @@
 			isa = PBXTargetDependency;
 			target = E44AACBC22AB0CB80072B62D /* Location */;
 			targetProxy = E44AACD022AB0CB80072B62D /* PBXContainerItemProxy */;
+		};
+		E44AACEF22AB0E150072B62D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E44AACE322AB0E150072B62D /* ClientApi */;
+			targetProxy = E44AACEE22AB0E150072B62D /* PBXContainerItemProxy */;
+		};
+		E44AACF122AB0E150072B62D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E44AAC5F22AB025E0072B62D /* WeatherApp */;
+			targetProxy = E44AACF022AB0E150072B62D /* PBXContainerItemProxy */;
+		};
+		E44AACF822AB0E150072B62D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E44AACE322AB0E150072B62D /* ClientApi */;
+			targetProxy = E44AACF722AB0E150072B62D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -713,6 +969,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LocationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.leboncoin.LocationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
+			};
+			name = Debug;
+		};
+		E44AACDA22AB0CB80072B62D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LocationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -726,20 +1004,96 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
 			};
-			name = Debug;
+			name = Release;
 		};
-		E44AACDA22AB0CB80072B62D /* Release */ = {
+		E44AACFC22AB0E150072B62D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LocationTests/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ClientApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.leboncoin.LocationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = test.leboncoin.ClientApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E44AACFD22AB0E150072B62D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ClientApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.leboncoin.ClientApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E44AACFF22AB0E150072B62D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClientApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.leboncoin.ClientApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
+			};
+			name = Debug;
+		};
+		E44AAD0022AB0E150072B62D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClientApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.leboncoin.ClientApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -791,6 +1145,24 @@
 			buildConfigurations = (
 				E44AACD922AB0CB80072B62D /* Debug */,
 				E44AACDA22AB0CB80072B62D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E44AACFB22AB0E150072B62D /* Build configuration list for PBXNativeTarget "ClientApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E44AACFC22AB0E150072B62D /* Debug */,
+				E44AACFD22AB0E150072B62D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E44AACFE22AB0E150072B62D /* Build configuration list for PBXNativeTarget "ClientApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E44AACFF22AB0E150072B62D /* Debug */,
+				E44AAD0022AB0E150072B62D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

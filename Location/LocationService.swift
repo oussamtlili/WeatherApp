@@ -32,7 +32,6 @@ public class LocationService: NSObject {
         } else {
             didFailToRetreiveLocation?(LocationError.serviceDisabled)
         }
-        
     }
     
     // MARK: - Private methods
