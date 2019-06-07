@@ -13,6 +13,7 @@
 		E44AAC6B22AB025F0072B62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44AAC6A22AB025F0072B62D /* Assets.xcassets */; };
 		E44AAC6E22AB025F0072B62D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44AAC6C22AB025F0072B62D /* LaunchScreen.storyboard */; };
 		E44AAC7922AB025F0072B62D /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AAC7822AB025F0072B62D /* WeatherAppTests.swift */; };
+		E44AAC8622AB02E50072B62D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E44AAC8522AB02E50072B62D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E44AAC7422AB025F0072B62D /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44AAC7822AB025F0072B62D /* WeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppTests.swift; sourceTree = "<group>"; };
 		E44AAC7A22AB025F0072B62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44AAC8522AB02E50072B62D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,8 @@
 				E44AAC6322AB025E0072B62D /* AppDelegate.swift */,
 				E44AAC6522AB025E0072B62D /* ViewController.swift */,
 				E44AAC6722AB025E0072B62D /* Main.storyboard */,
-				E44AAC6A22AB025F0072B62D /* Assets.xcassets */,
 				E44AAC6C22AB025F0072B62D /* LaunchScreen.storyboard */,
+				E44AAC8322AB02B20072B62D /* Ressources */,
 				E44AAC6F22AB025F0072B62D /* Info.plist */,
 			);
 			path = WeatherApp;
@@ -94,6 +96,23 @@
 				E44AAC7A22AB025F0072B62D /* Info.plist */,
 			);
 			path = WeatherAppTests;
+			sourceTree = "<group>";
+		};
+		E44AAC8322AB02B20072B62D /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				E44AAC8422AB02C50072B62D /* Localizable */,
+				E44AAC6A22AB025F0072B62D /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		E44AAC8422AB02C50072B62D /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				E44AAC8522AB02E50072B62D /* Localizable.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,10 +174,10 @@
 			};
 			buildConfigurationList = E44AAC5B22AB025E0072B62D /* Build configuration list for PBXProject "WeatherApp" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = fr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
+				fr,
 				Base,
 			);
 			mainGroup = E44AAC5722AB025E0072B62D;
@@ -178,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E44AAC6E22AB025F0072B62D /* LaunchScreen.storyboard in Resources */,
+				E44AAC8622AB02E50072B62D /* Localizable.strings in Resources */,
 				E44AAC6B22AB025F0072B62D /* Assets.xcassets in Resources */,
 				E44AAC6922AB025E0072B62D /* Main.storyboard in Resources */,
 			);
