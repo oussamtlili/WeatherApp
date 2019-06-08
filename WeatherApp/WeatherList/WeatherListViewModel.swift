@@ -122,7 +122,7 @@ extension WeatherListViewModel: WeatherListTableViewDataProvider {
         guard let weathers = weathers else {
             return nil
         }
-        return Dictionary(grouping: weathers, by: { $0.dateIngoringHours })
+        return Dictionary(grouping: weathers, by: { $0.dateIngoringTime })
             .sorted(by: { $0.key < $1.key })
             .map { return WeatherItem(weathers: $0.value, date: $0.key) }
     }

@@ -20,12 +20,12 @@ public extension Weather {
         return temperatureInKelvin.celsiusFromKelvin.rounded()
     }
     
-    var dateIngoringHours: Date {
+    var dateIngoringTime: Date {
         guard let date = date,
-            let dateWithoutHours = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: date)) else {
+            let dateWithoutTime = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: date)) else {
             fatalError("Failed to strip time from Date")
         }
-        return dateWithoutHours
+        return dateWithoutTime
     }
 }
 

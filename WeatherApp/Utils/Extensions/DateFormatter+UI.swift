@@ -16,5 +16,13 @@ extension DateFormatter {
         formatter.timeZone = timeZone
         return formatter
     }
+    
+    public static func weatherTimeFormatter(locale: Locale = Locale.current, timeZone: TimeZone = TimeZone.current) -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        formatter.locale = locale
+        formatter.timeZone = timeZone
+        return formatter
+    }
 
 }

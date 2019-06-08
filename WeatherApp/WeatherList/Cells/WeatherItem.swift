@@ -60,9 +60,7 @@ struct WeatherItem {
         return NSLocalizedString("Commun.Snow", comment: "")
     }
     
-    // MARK : - Private attributes
-    
-    private let weathers: [Weather]
+    let weathers: [Weather]
     
     let date: Date
 }

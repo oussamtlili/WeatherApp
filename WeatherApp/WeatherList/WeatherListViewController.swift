@@ -51,7 +51,11 @@ class WeatherListViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: .zero)
         tableViewDelegate = WeatherListTableViewDelegate(tableView: tableView)
         tableViewDelegate?.didSelectContentAtIndex = {[weak self] (indexPath) in
-            self?.redirectToWeatherDetail()
+            guard let `self` = self else { return }
+            
+            if let weatherItem = self.viewModel.getData()?[indexPath.row] {
+                self.redirectToWeatherDetail(weatherItem: weatherItem)
+            }
         }
         
         tableViewDataSource = WeatherListTableViewDataSource(
@@ -113,8 +117,12 @@ class WeatherListViewController: UIViewController {
         title = pageTitle
     }
     
-    private func redirectToWeatherDetail() {
+    private func redirectToWeatherDetail(weatherItem: WeatherItem) {
+        let weatherDetailViewModel = WeatherDetailViewModel(weathersItem: weatherItem)
+        let weatherDetailViewController = WeatherDetailViewController(
+            viewModel: weatherDetailViewModel)
         
+        navigationController?.pushViewController(weatherDetailViewController, animated: true)
     }
 }
 
