@@ -33,4 +33,7 @@ public struct DynamicKeys: Codable {
         }
     }
     
+    public init(values: [String: Double]) {
+        self.values = values
+    }
 }

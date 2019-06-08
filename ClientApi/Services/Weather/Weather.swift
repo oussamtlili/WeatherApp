@@ -73,4 +73,46 @@ public struct Weather: Codable {
         case convectiveInhibition = "convective_inhibition"
         case date = "date"
     }
+    
+    public init(temperature: DynamicKeys,
+                pression: Presure,
+                pluie: Double,
+                pluieConvective: Double,
+                humidite: DynamicKeys,
+                ventMoyen: DynamicKeys,
+                ventRafales: DynamicKeys,
+                ventDirection: DynamicKeys,
+                isoZero: Double,
+                risqueNeige: SnowRisk,
+                cape: Double,
+                nebulosite: Nebulosite,
+                geopotentiel: Double?,
+                vitesseVerticale: Double?,
+                pwat: Double?,
+                liftedIndex: Double?,
+                mostUnstableLiftedIndex: Double?,
+                mucape: Double?,
+                convectiveInhibition: Double?,
+                date: Date?) {
+        self.temperature = temperature
+        self.pression = pression
+        self.pluie = pluie
+        self.pluieConvective = pluieConvective
+        self.humidite = humidite
+        self.ventMoyen = ventMoyen
+        self.ventRafales = ventRafales
+        self.ventDirection = ventDirection
+        self.isoZero = isoZero
+        self.risqueNeige = risqueNeige
+        self.cape = cape
+        self.nebulosite = nebulosite
+        self.geopotentiel = geopotentiel
+        self.vitesseVerticale = vitesseVerticale
+        self.pwat = pwat
+        self.liftedIndex = liftedIndex
+        self.mostUnstableLiftedIndex = mostUnstableLiftedIndex
+        self.mucape = mucape
+        self.convectiveInhibition = convectiveInhibition
+        self.date = date
+    }
 }

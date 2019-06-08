@@ -13,4 +13,14 @@ public struct Nebulosite: Codable {
     public let moyenne: Double
     public let basse: Double
     public let totale: Double
+    
+    public init(haute: Double,
+                moyenne: Double,
+                basse: Double,
+                totale: Double) {
+        self.haute = haute
+        self.moyenne = moyenne
+        self.basse = basse
+        self.totale = totale
+    }
 }

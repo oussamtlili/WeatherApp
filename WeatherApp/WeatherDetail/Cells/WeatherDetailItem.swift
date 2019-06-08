@@ -44,5 +44,5 @@ struct WeatherDetailItem {
     
     // MARK:- Private Attributes
     
-    let weather: Weather
+    private let weather: Weather
 }

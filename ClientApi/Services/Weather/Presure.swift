@@ -14,4 +14,8 @@ public struct Presure: Codable {
     private enum CodingKeys: String, CodingKey {
         case niveauDeLaMer = "niveau_de_la_mer"
     }
+    
+    public init(niveauDeLaMer: Int) {
+        self.niveauDeLaMer = niveauDeLaMer
+    }
 }
