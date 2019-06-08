@@ -37,7 +37,7 @@ internal class ClientApi {
         do {
             let response = try jsonDecoder.decode(T.self, from: data)
             return response
-        } catch {
+        } catch(let error) {
             throw APIError.parsingFail
         }
     }

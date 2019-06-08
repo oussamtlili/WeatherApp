@@ -49,7 +49,7 @@ public struct Weather: Codable {
     
     public let convectiveInhibition: Double?
     
-    public var date: Date = Date()
+    public var date: Date?
     
     private enum CodingKeys: String, CodingKey {
         case temperature
@@ -71,5 +71,6 @@ public struct Weather: Codable {
         case mostUnstableLiftedIndex = "most_unstable_lifted_index"
         case mucape
         case convectiveInhibition = "convective_inhibition"
+        case date = "date"
     }
 }

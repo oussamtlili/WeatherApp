@@ -51,11 +51,17 @@ class WeatherListViewModel {
     }
     
     public func loadParisWeatherInformations() {
-        self.updatePageTitle(cityName: NSLocalizedString("Commun.Paris", comment: ""))
+        updatePageTitle(cityName: NSLocalizedString("Commun.Paris", comment: ""))
         getWeather(
             longitude: Constans.parisLongitude,
             latitue: Constans.parisLatitude,
             cityName: NSLocalizedString("Commun.Paris", comment: ""))
+    }
+    
+    public func retreiveFromCache() {
+        updatePageTitle(cityName: archiveService.retriveCityName())
+        weathers = archiveService.retriveWeathers()
+        didSucceedToRetreiveWeather?()
     }
     
     // MARK - Private methods
@@ -97,7 +103,6 @@ class WeatherListViewModel {
     
     private func failedToRetreiveWeather() {
         let cachedWeathers = archiveService.retriveWeathers()
-        let cachedCityName = archiveService.retriveCityName()
         didFailToRetreiveWeather?(cachedWeathers != nil)
     }
     

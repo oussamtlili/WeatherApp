@@ -7,6 +7,7 @@
 */
 
 // Commun
+"Commun.Ok" = "Ok";
 "Commun.LocationError.NotAuthorized" = "L'applicartion n'est pas authorisé à récupérer votre position. Nous vous inivtions à activer l'authorisation. Par défaut nous afficherons la météo de Paris";
 "Commun.LocationError.ServiceDisabled" = "Le service de géolocalisation est désactiver. Nous vous inivtions à l'activer. Par défaut nous afficherons la météo de Paris";
 "Commun.LocationError.FailToRetreiveLocation" = "Nous n'arrivons pas à avoir votre position. Nous allons vous afficher la météo de Paris";
@@ -18,6 +19,8 @@
 "Commun.Snow" = "Neige";
 "Commun.NotSnow" = "Pas de Neige";
 "Commun.TemperatureDefaultMessage" = "Pas de temperature observée";
+"Commun.FailToRetreiveWeatherWithCache" = "Malheuresement nous n'avons pas pu récupérer la météo de votre région. Néaumoins nous allons vous afficher votre derniére recherche";
+"Commun.FailToRetreiveWeatherWithoutCache" = "Malheuresement nous n'avons pas pu récupérer la météo de votre région.";
 
 // Weather list
 

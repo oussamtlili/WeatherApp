@@ -21,10 +21,11 @@ public extension Weather {
     }
     
     var dateIngoringHours: Date {
-        guard let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: date)) else {
+        guard let date = date,
+            let dateWithoutHours = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: date)) else {
             fatalError("Failed to strip time from Date")
         }
-        return date
+        return dateWithoutHours
     }
 }
 

@@ -79,8 +79,13 @@ class WeatherListViewController: UIViewController {
     }
     
     private func bindGetWeatherFail() {
-        viewModel.didFailToRetreiveWeather = { (canLoadFromCache) in
-            
+        viewModel.didFailToRetreiveWeather = {[weak self] (canLoadFromCache) in
+            guard let `self` = self else { return }
+            if canLoadFromCache {
+                self.displayRetreiveWeatherErrorWithCache()
+            } else {
+                self.displayRetreiveWeatherErrorWithoutCache()
+            }
         }
     }
     
@@ -153,6 +158,44 @@ private extension WeatherListViewController {
         }
     }
 }
+
+
+// MARK: - Weather retreive faillure extension
+
+private extension WeatherListViewController {
+    
+    func displayRetreiveWeatherErrorWithoutCache() {
+        let alert = UIAlertController(
+                    title: nil,
+                    message: NSLocalizedString("Commun.FailToRetreiveWeatherWithoutCache", comment: ""),
+                    preferredStyle: .alert)
+        let action = UIAlertAction(
+            title: NSLocalizedString("Commun.Ok", comment: ""),
+            style: .default,
+            handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func displayRetreiveWeatherErrorWithCache() {
+        let alert = UIAlertController(
+            title: nil,
+            message: NSLocalizedString("Commun.FailToRetreiveWeatherWithCache", comment: ""),
+            preferredStyle: .alert)
+        
+        let action = UIAlertAction(
+            title: NSLocalizedString("Commun.Ok", comment: ""),
+            style: .default) { [weak self] _ in
+                self?.viewModel.retreiveFromCache()
+        }
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+
 
 // MARK : - Constants
 
