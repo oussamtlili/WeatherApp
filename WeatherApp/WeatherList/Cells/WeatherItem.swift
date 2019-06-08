@@ -25,8 +25,7 @@ struct WeatherItem {
     }
     
     var maxTemperature: String {
-        let maxTemperatureInCelsius = weathers.compactMap { $0.temperatureInCelsius }.max { $0 > $1 }
-        
+        let maxTemperatureInCelsius = weathers.compactMap { $0.temperatureInCelsius }.max()
         guard let celsiusTemperature = maxTemperatureInCelsius else {
             return NSLocalizedString("Commun.TemperatureDefaultMessage", comment: "")
         }
@@ -35,7 +34,7 @@ struct WeatherItem {
     }
     
     var minTemperature: String {
-        let minTemperatureInCelsius = weathers.compactMap { $0.temperatureInCelsius }.min { $0 > $1 }
+        let minTemperatureInCelsius = weathers.compactMap { $0.temperatureInCelsius }.min()
         
         guard let celsiusTemperature = minTemperatureInCelsius else {
             return NSLocalizedString("Commun.TemperatureDefaultMessage", comment: "")

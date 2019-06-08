@@ -62,7 +62,7 @@ class WeatherDetailItemTests: XCTestCase {
         let result = WeatherDetailItem(weather: weather)
         
         // Then
-        XCTAssertEqual(result.temperature, "29.0°c")
+        XCTAssertEqual(result.temperature, "29°c")
     }
     
     func testWeatherDetailItemRiskOfRainPluieZero() {

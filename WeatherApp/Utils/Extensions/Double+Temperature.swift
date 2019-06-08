@@ -15,7 +15,7 @@ extension Double {
     }
     
     var formattedTemperature: String {
-        return "\(self)°c"
+        return "\(Int(self))°c"
     }
 }
 

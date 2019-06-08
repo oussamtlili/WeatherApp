@@ -31,8 +31,11 @@ class WeatherDetailViewModel: NSObject {
 extension WeatherDetailViewModel: WeatherDetailTableViewDataProvider {
     func getData() -> [WeatherDetailItem] {
         return weatherItem.weathers
-            .filter({ $0.date != nil})
-            .sorted(by:{ $0.date! < $1.date! })
+            .filter({ $0.date != nil })
+            .sorted(by:{
+                guard let firstDate = $0.date, let secondDate = $1.date else { return false }
+                return firstDate < secondDate
+            })
             .map { WeatherDetailItem(weather: $0) }
     }
 }
