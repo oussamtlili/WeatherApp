@@ -82,4 +82,15 @@ extension LocationService: CLLocationManagerDelegate {
         didFailToRetreiveLocation?(LocationError.failToRetreiveLocation)
         locationManager.stopUpdatingLocation()
     }
+    
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .denied, .restricted:
+            didFailToRetreiveLocation?(LocationError.notAuthorized)
+        case .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        default:
+            break
+        }
+    }
 }
