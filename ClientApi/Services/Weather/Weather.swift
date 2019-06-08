@@ -11,45 +11,45 @@ import Foundation
 
 public struct Weather: Codable {
     
-    let temperature: DynamicKeys
+    public let temperature: DynamicKeys
     
-    let pression: Presure
+    public let pression: Presure
     
-    let pluie: Double
+    public let pluie: Double
     
-    let pluieConvective: Double
+    public let pluieConvective: Double
     
-    let humidite: DynamicKeys
+    public let humidite: DynamicKeys
     
-    let ventMoyen: DynamicKeys
+    public let ventMoyen: DynamicKeys
     
-    let ventRafales: DynamicKeys
+    public let ventRafales: DynamicKeys
     
-    let ventDirection: DynamicKeys
+    public let ventDirection: DynamicKeys
     
-    let isoZero: Double
+    public let isoZero: Double
     
-    let risqueNeige: SnowRisk
+    public let risqueNeige: SnowRisk
     
-    let cape: Double
+    public let cape: Double
     
-    let nebulosite: Nebulosite
+    public let nebulosite: Nebulosite
     
-    let geopotentiel: Double?
+    public let geopotentiel: Double?
     
-    let vitesseVerticale: Double?
+    public let vitesseVerticale: Double?
     
-    let pwat: Double?
+    public let pwat: Double?
     
-    let liftedIndex: Double?
+    public let liftedIndex: Double?
     
-    let mostUnstableLiftedIndex: Double?
+    public let mostUnstableLiftedIndex: Double?
     
-    let mucape: Double?
+    public let mucape: Double?
     
-    let convectiveInhibition: Double?
+    public let convectiveInhibition: Double?
     
-    var date: Date = Date()
+    public var date: Date = Date()
     
     private enum CodingKeys: String, CodingKey {
         case temperature

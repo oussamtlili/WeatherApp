@@ -19,25 +19,25 @@ public struct UserDefaultsArchiveService: ArchiveService {
         guard let weathers = weathers else {
             return
         }
-        encode(object: weathers, key: Constants.weathersArchiveKey)
+        insert(object: weathers, key: Constants.weathersArchiveKey)
     }
     
     public  func retriveWeathers() -> [Weather]? {
-        return decode(key: Constants.weathersArchiveKey)
+        return retreive(key: Constants.weathersArchiveKey)
     }
     
     public func store(cityName: String?) {
         guard let cityName = cityName else {
             return
         }
-        encode(object: cityName, key: Constants.cityNameArchiveKey)
+        insert(object: cityName, key: Constants.cityNameArchiveKey)
     }
     
     public func retriveCityName() -> String? {
-        return decode(key: Constants.cityNameArchiveKey)
+        return retreive(key: Constants.cityNameArchiveKey)
     }
     
-    private func encode<T: Encodable>(object: T, key: String) {
+    private func insert<T: Encodable>(object: T, key: String) {
         let encoder = JSONEncoder()
         if let encodedObject = try? encoder.encode(object) {
             UserDefaults.standard.set(encodedObject, forKey: key)
@@ -45,7 +45,7 @@ public struct UserDefaultsArchiveService: ArchiveService {
         }
     }
     
-    private func decode<T: Decodable>(key: String) -> T? {
+    private func retreive<T: Decodable>(key: String) -> T? {
         let decoder = JSONDecoder()
         guard let encodedObject = UserDefaults.standard.data(forKey: key),
             let decodedObject = try? decoder.decode(T.self, from: encodedObject) else {

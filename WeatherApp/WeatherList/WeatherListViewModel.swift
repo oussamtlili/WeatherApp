@@ -42,6 +42,7 @@ class WeatherListViewModel {
     private let weatherApiClient: WeatherApiClient
     private let locationService: LocationService
     private let archiveService: ArchiveService
+    private var weathers: [Weather]?
     
     // MARK - Public methods
     
@@ -53,7 +54,7 @@ class WeatherListViewModel {
         self.updatePageTitle(cityName: NSLocalizedString("Commun.Paris", comment: ""))
         getWeather(
             longitude: Constans.parisLongitude,
-            latitue: Constans.parisLongitude,
+            latitue: Constans.parisLatitude,
             cityName: NSLocalizedString("Commun.Paris", comment: ""))
     }
     
@@ -88,6 +89,7 @@ class WeatherListViewModel {
     }
     
     private func succeedToRetreiveWeather(weathers: [Weather]?, cityName: String?) {
+        self.weathers = weathers
         archiveService.store(cityName: cityName)
         archiveService.store(weathers: weathers)
         didSucceedToRetreiveWeather?()
@@ -108,8 +110,21 @@ class WeatherListViewModel {
     }
 }
 
+// MARK: - WeatherListTableViewDataProvider
+
+extension WeatherListViewModel: WeatherListTableViewDataProvider {
+    func getData() -> [WeatherItem]? {
+        guard let weathers = weathers else {
+            return nil
+        }
+        return Dictionary(grouping: weathers, by: { $0.dateIngoringHours })
+            .sorted(by: { $0.key < $1.key })
+            .map { return WeatherItem(weathers: $0.value, date: $0.key) }
+    }
+}
 
 // MARK: - Constans
+
 private extension WeatherListViewModel {
     enum  Constans {
         static let parisLongitude: Double = 2.3488

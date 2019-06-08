@@ -10,9 +10,15 @@ import UIKit
 import Location
 
 class WeatherListViewController: UIViewController {
+    
+    // MARK: - IBoutlets
+    
+    @IBOutlet weak var tableView: UITableView!
     // MARK: - Private attributes
     
     private let viewModel: WeatherListViewModel
+    private var tableViewDelegate: WeatherListTableViewDelegate?
+    private var tableViewDataSource: WeatherListTableViewDataSource?
     
     // MARK: - Init
     
@@ -32,12 +38,26 @@ class WeatherListViewController: UIViewController {
         
         configureNavigationBar()
         
+        configureTableView()
+        
         bindViewModel()
         
         viewModel.loadWeatherInformations()
     }
     
     // MARK: - Private Methods
+    
+    private func configureTableView() {
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableViewDelegate = WeatherListTableViewDelegate(tableView: tableView)
+        tableViewDelegate?.didSelectContentAtIndex = {[weak self] (indexPath) in
+            self?.redirectToWeatherDetail()
+        }
+        
+        tableViewDataSource = WeatherListTableViewDataSource(
+            tableView: tableView,
+            dataProvider: viewModel)
+    }
     
     private func bindViewModel() {
         bindPageTitle()
@@ -65,8 +85,10 @@ class WeatherListViewController: UIViewController {
     }
     
     private func bindGetWeatherSuccess() {
-        viewModel.didSucceedToRetreiveWeather = {
-            
+        viewModel.didSucceedToRetreiveWeather = {[weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
     }
     
@@ -84,6 +106,10 @@ class WeatherListViewController: UIViewController {
     
     private func updateNavigationBarTitle(pageTitle: String) {
         title = pageTitle
+    }
+    
+    private func redirectToWeatherDetail() {
+        
     }
 }
 
@@ -117,7 +143,7 @@ private extension WeatherListViewController {
     
     private func redirectToLocationActivation(error: LocationError) {
         if error == .notAuthorized {
-            if let url = URL(string: "App-Prefs:root=Privacy&path=LOCATION") {
+            if let url = URL(string: Constants.locationPath) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         } else if error == .serviceDisabled {
@@ -127,3 +153,13 @@ private extension WeatherListViewController {
         }
     }
 }
+
+// MARK : - Constants
+
+private extension WeatherListViewController {
+    enum Constants {
+        static let locationPath = "App-Prefs:root=Privacy&path=LOCATION"
+    }
+}
+
+

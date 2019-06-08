@@ -13,6 +13,11 @@
 "Commun.Display" = "Afficher";
 "Commun.Activate" =  "Activer";
 "Commun.Paris" = "Paris";
+"Commun.Rain" = "Pluie";
+"Commun.NotRain" = "Pas de Pluie";
+"Commun.Snow" = "Neige";
+"Commun.NotSnow" = "Pas de Neige";
+"Commun.TemperatureDefaultMessage" = "Pas de temperature observée";
 
 // Weather list
 
