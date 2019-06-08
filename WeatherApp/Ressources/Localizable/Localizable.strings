@@ -5,3 +5,15 @@
   Created by Oussam Tlili on 07/06/2019.
   Copyright © 2019 Oussam Tlili. All rights reserved.
 */
+
+// Commun
+"Commun.LocationError.NotAuthorized" = "L'applicartion n'est pas authorisé à récupérer votre position. Nous vous inivtions à activer l'authorisation. Par défaut nous afficherons la météo de Paris";
+"Commun.LocationError.ServiceDisabled" = "Le service de géolocalisation est désactiver. Nous vous inivtions à l'activer. Par défaut nous afficherons la météo de Paris";
+"Commun.LocationError.FailToRetreiveLocation" = "Nous n'arrivons pas à avoir votre position. Nous allons vous afficher la météo de Paris";
+"Commun.Display" = "Afficher";
+"Commun.Activate" =  "Activer";
+"Commun.Paris" = "Paris";
+
+// Weather list
+
+"WeatherList.defaultTitle" = "Météo";

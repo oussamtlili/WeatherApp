@@ -10,17 +10,20 @@ import Foundation
 
 public struct WeatherApiClient {
     
+    // MARK: - init
+    public init() {}
+    
     // MARK: - Private attributes
-    static private let clientAPI = ClientApi()
+    private let clientAPI = ClientApi()
     
     // MARK: - Public methods
-    public static func requestWeather(
+    public func requestWeather(
         with longitude: Double,
         and latitude: Double,
         completion: @escaping (_ response :WeatherResponse? ,_ error :Error?)->Void) {
         do {
             let url = try Router.getWheathers(longitude: longitude, lattitude: latitude).requestUrl()
-            WeatherApiClient.clientAPI.getData(from: url) { (weather, error) in
+            clientAPI.getData(from: url) { (weather, error) in
                 completion(weather, error)
             }
         } catch (let error ){
