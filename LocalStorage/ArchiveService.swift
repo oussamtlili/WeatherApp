@@ -10,6 +10,8 @@ import Foundation
 import ClientApi
 
 public protocol ArchiveService {
-    func store(weathers: [Weather])
+    func store(weathers: [Weather]?)
+    func store(cityName: String?)
     func retriveWeathers() -> [Weather]?
+    func retriveCityName() -> String?
 }

@@ -9,13 +9,16 @@
 import Foundation
 import ClientApi
 import Location
+import LocalStorage
 
 class WeatherListViewModel {
     
     public init(weatherApiClient: WeatherApiClient = WeatherApiClient(),
-                locationService: LocationService = LocationService()) {
+                locationService: LocationService = LocationService(),
+                archiveService: ArchiveService = UserDefaultsArchiveService()) {
         self.weatherApiClient = weatherApiClient
         self.locationService = locationService
+        self.archiveService = archiveService
     }
     
     // MARK - Public attributes
@@ -30,10 +33,15 @@ class WeatherListViewModel {
     
     var didFailToRetreiveUserLocation: ((_ error: LocationError) -> Void)?
     
+    var didFailToRetreiveWeather:((_ canLoadFromCache: Bool) -> Void)?
+    
+    var didSucceedToRetreiveWeather:(() -> Void)?
+    
     // MARK - Private attributes
     
     private let weatherApiClient: WeatherApiClient
     private let locationService: LocationService
+    private let archiveService: ArchiveService
     
     // MARK - Public methods
     
@@ -42,8 +50,11 @@ class WeatherListViewModel {
     }
     
     public func loadParisWeatherInformations() {
-        pageTitle = NSLocalizedString("Commun.Paris", comment: "")
-        getWeather(longitude: Constans.parisLongitude, latitue: Constans.parisLongitude)
+        self.updatePageTitle(cityName: NSLocalizedString("Commun.Paris", comment: ""))
+        getWeather(
+            longitude: Constans.parisLongitude,
+            latitue: Constans.parisLongitude,
+            cityName: NSLocalizedString("Commun.Paris", comment: ""))
     }
     
     // MARK - Private methods
@@ -52,7 +63,7 @@ class WeatherListViewModel {
         locationService.didRetreiveLocation = { [weak self] (longitude, latitude, cityName) in
             guard let `self` = self else { return }
             self.updatePageTitle(cityName: cityName)
-            self.getWeather(longitude: longitude, latitue: latitude)
+            self.getWeather(longitude: longitude, latitue: latitude, cityName: cityName)
             
         }
         
@@ -62,10 +73,30 @@ class WeatherListViewModel {
     }
     
     
-    private func getWeather(longitude: Double, latitue: Double) {
-        weatherApiClient.requestWeather(with: longitude, and: latitue) { (weatherResponse, error) in
-            
+    private func getWeather(longitude: Double, latitue: Double, cityName: String?) {
+        weatherApiClient.requestWeather(
+            with: longitude,
+            and: latitue) { [weak self] (weatherResponse, error) in
+                guard let `self` = self else { return }
+                if let weatherResponse = weatherResponse,
+                    weatherResponse.status == .valid {
+                    self.succeedToRetreiveWeather(weathers: weatherResponse.weathers, cityName: cityName)
+                } else {
+                    self.failedToRetreiveWeather()
+                }
         }
+    }
+    
+    private func succeedToRetreiveWeather(weathers: [Weather]?, cityName: String?) {
+        archiveService.store(cityName: cityName)
+        archiveService.store(weathers: weathers)
+        didSucceedToRetreiveWeather?()
+    }
+    
+    private func failedToRetreiveWeather() {
+        let cachedWeathers = archiveService.retriveWeathers()
+        let cachedCityName = archiveService.retriveCityName()
+        didFailToRetreiveWeather?(cachedWeathers != nil)
     }
     
     private func updatePageTitle(cityName: String?) {

@@ -19,7 +19,19 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fsT-Xy-Or7">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fsT-Xy-Or7" secondAttribute="trailing" id="60W-pP-04H"/>
+                <constraint firstItem="fsT-Xy-Or7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Sqh-BB-bcV"/>
+                <constraint firstItem="fsT-Xy-Or7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hdA-WC-Fxb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fsT-Xy-Or7" secondAttribute="bottom" id="sFc-8s-XQa"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

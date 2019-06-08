@@ -15,21 +15,43 @@ public struct UserDefaultsArchiveService: ArchiveService {
     
     public init() {}
     
-    public func store(weathers: [Weather]) {
+    public func store(weathers: [Weather]?) {
+        guard let weathers = weathers else {
+            return
+        }
+        encode(object: weathers, key: Constants.weathersArchiveKey)
+    }
+    
+    public  func retriveWeathers() -> [Weather]? {
+        return decode(key: Constants.weathersArchiveKey)
+    }
+    
+    public func store(cityName: String?) {
+        guard let cityName = cityName else {
+            return
+        }
+        encode(object: cityName, key: Constants.cityNameArchiveKey)
+    }
+    
+    public func retriveCityName() -> String? {
+        return decode(key: Constants.cityNameArchiveKey)
+    }
+    
+    private func encode<T: Encodable>(object: T, key: String) {
         let encoder = JSONEncoder()
-        if let encodedWeathers = try? encoder.encode(weathers) {
-            UserDefaults.standard.set(encodedWeathers, forKey: Constants.weathersArchiveKey)
+        if let encodedObject = try? encoder.encode(object) {
+            UserDefaults.standard.set(encodedObject, forKey: key)
             UserDefaults.standard.synchronize()
         }
     }
     
-    public  func retriveWeathers() -> [Weather]? {
+    private func decode<T: Decodable>(key: String) -> T? {
         let decoder = JSONDecoder()
-        guard let encodedWeathers = UserDefaults.standard.data(forKey: Constants.weathersArchiveKey),
-            let weathers = try? decoder.decode([Weather].self, from: encodedWeathers) else {
+        guard let encodedObject = UserDefaults.standard.data(forKey: key),
+            let decodedObject = try? decoder.decode(T.self, from: encodedObject) else {
                 return nil
         }
-        return weathers
+        return decodedObject
     }
 }
 
@@ -38,5 +60,6 @@ public struct UserDefaultsArchiveService: ArchiveService {
 private extension UserDefaultsArchiveService {
     enum Constants {
         static let weathersArchiveKey = "weathersArchiveKey"
+        static let cityNameArchiveKey = "cityNameArchiveKey"
     }
 }

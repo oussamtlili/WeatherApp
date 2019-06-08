@@ -41,7 +41,9 @@ class WeatherListViewController: UIViewController {
     
     private func bindViewModel() {
         bindPageTitle()
-        bindGeoloFail()
+        bindGeolocationFail()
+        bindGetWeatherFail()
+        bindGetWeatherSuccess()
     }
     
     private func bindPageTitle() {
@@ -50,9 +52,21 @@ class WeatherListViewController: UIViewController {
         }
     }
     
-    private func bindGeoloFail() {
+    private func bindGeolocationFail() {
         viewModel.didFailToRetreiveUserLocation = { [weak self] (error) in
             self?.displayGeolocErrorPopup(with: error)
+        }
+    }
+    
+    private func bindGetWeatherFail() {
+        viewModel.didFailToRetreiveWeather = { (canLoadFromCache) in
+            
+        }
+    }
+    
+    private func bindGetWeatherSuccess() {
+        viewModel.didSucceedToRetreiveWeather = {
+            
         }
     }
     
