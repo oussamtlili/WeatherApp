@@ -23,6 +23,9 @@ jobs:
       xcode: "11.0"
     steps:
       - run:
+          name: install swift lint
+          command: brew install swiftlint
+      - run:
           name: run swift lint
           command: fastlane run swiftlint
 
