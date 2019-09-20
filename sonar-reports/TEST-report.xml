@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='LocalStorageTests.xctest' tests='27' failures='0'>
+  <testsuite name='WeatherAppTests.WeatherDetailItemTests' tests='9' failures='0'>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemRiskOfRainPluieNegative' time='0.003'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemRiskOfRainPluiePositive' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemRiskOfRainPluieZero' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemRiskOfSnowFalse' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemRiskOfSnowTrue' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemTemperatureDefaultMessage' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemTemperatureFormattedResult' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemTimeNil' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherDetailItemTests' name='testWeatherDetailItemTimeNotNil' time='0.002'/>
+  </testsuite>
+  <testsuite name='WeatherAppTests.WeatherItemTests' tests='8' failures='0'>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testMaxTemperatureWeathersMixedTemperature' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testMaxTemperatureWeathersWithoutTemperature' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testMaxTemperatureWeathersWithTemperature' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testMinTemperatureWeathersMixedTemperature' time='0.001'/>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testMinTemperatureWeathersWithoutTemperature' time='0.000'/>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testMinTemperatureWeathersWithTemperature' time='0.000'/>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testMintTemperatureEmptyWeathers' time='0.000'/>
+    <testcase classname='WeatherAppTests.WeatherItemTests' name='testWeatherItemFormattedDate' time='0.001'/>
+  </testsuite>
+  <testsuite name='LocationTests.LocationTests' tests='2' failures='0'>
+    <testcase classname='LocationTests.LocationTests' name='testExample' time='0.001'/>
+    <testcase classname='LocationTests.LocationTests' name='testPerformanceExample' time='0.334'/>
+  </testsuite>
+  <testsuite name='ClientApiTests.RouterTests' tests='1' failures='0'>
+    <testcase classname='ClientApiTests.RouterTests' name='testGetWeatherUrl' time='0.002'/>
+  </testsuite>
+  <testsuite name='ClientApiTests.WeatherResponseTests' tests='5' failures='0'>
+    <testcase classname='ClientApiTests.WeatherResponseTests' name='testWeatherResponseBadRequest' time='0.001'/>
+    <testcase classname='ClientApiTests.WeatherResponseTests' name='testWeatherResponseBandwidthLimitExceeded' time='0.001'/>
+    <testcase classname='ClientApiTests.WeatherResponseTests' name='testWeatherResponseConflict' time='0.001'/>
+    <testcase classname='ClientApiTests.WeatherResponseTests' name='testWeatherResponseUnkonw' time='0.000'/>
+    <testcase classname='ClientApiTests.WeatherResponseTests' name='testWeatherResponseValid' time='0.000'/>
+  </testsuite>
+  <testsuite name='LocalStorageTests.LocalStorageTests' tests='2' failures='0'>
+    <testcase classname='LocalStorageTests.LocalStorageTests' name='testExample' time='0.001'/>
+    <testcase classname='LocalStorageTests.LocalStorageTests' name='testPerformanceExample' time='0.280'/>
+  </testsuite>
+</testsuites>
