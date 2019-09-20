@@ -41,8 +41,6 @@ jobs:
 
 workflows:
   version: 2
-
-      #      - test
   checkout_test:
     jobs:
       - checkout_project
