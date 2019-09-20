@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  checkout_project:
+  run_danger:
     macos:
       xcode: "11.0"
     steps:
@@ -47,6 +47,6 @@ workflows:
     #  - lint :
      #     requires:
       #      - test
-  checkout_test:
+  run_danger:
     jobs:
       - checkout_project
