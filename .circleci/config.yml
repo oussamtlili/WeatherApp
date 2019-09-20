@@ -47,6 +47,6 @@ workflows:
     #  - lint :
      #     requires:
       #      - test
-  run_danger:
+  checkout_test:
     jobs:
-      - checkout_project
+      - run_danger
