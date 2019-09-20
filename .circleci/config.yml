@@ -35,3 +35,5 @@ workflows:
     jobs:
       - test
       - lint
+        requires:
+          - test
