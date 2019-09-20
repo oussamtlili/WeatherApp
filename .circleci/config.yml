@@ -9,6 +9,8 @@ jobs:
       xcode: "11.0"
     steps:
       - checkout
+      - run:
+          command: bundle install
       - run: 
           command: bundle exec danger --verbose
   test:
