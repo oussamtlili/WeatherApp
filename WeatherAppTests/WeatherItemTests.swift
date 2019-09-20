@@ -13,18 +13,18 @@ import ClientApi
 class WeatherItemTests: XCTestCase {
     private let weatherMock = WeatherMock()
     
-    func testWeatherItemFormattedDate() {
-        // Given
-        let dateString = "2019-06-08T10:00:00"
-        let date: Date = DateFormatter.testDateFormatter().date(from: dateString)!
-        
-        // When
-        let result = WeatherItem(weathers: [], date: date)
-        
-        // Then
-        XCTAssertEqual(result.formattedDate, "8 juin 2019")
-    }
-    
+//    func testWeatherItemFormattedDate() {
+//        // Given
+//        let dateString = "2019-06-08T10:00:00"
+//        let date: Date = DateFormatter.testDateFormatter().date(from: dateString)!
+//        
+//        // When
+//        let result = WeatherItem(weathers: [], date: date)
+//        
+//        // Then
+//        XCTAssertEqual(result.formattedDate, "8 juin 2019")
+//    }
+//    
     func testMintTemperatureEmptyWeathers() {
         // Given
         let weathers: [Weather] = []
