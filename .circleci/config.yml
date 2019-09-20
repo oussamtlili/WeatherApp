@@ -9,7 +9,8 @@ jobs:
       xcode: "11.0"
     steps:
       - checkout
-      - bundle exec danger
+      run: 
+        command: bundle exec danger --verbose
   test:
     # Specify the Xcode version to use
     macos:
