@@ -36,4 +36,4 @@ workflows:
       - test
       - lint
           requires:
-            - test
+            test
