@@ -4,6 +4,11 @@
 #
 version: 2
 jobs:
+  checkout_project:
+    macos:
+      xcode: "11.0"
+    steps:
+      - checkout
   test:
     # Specify the Xcode version to use
     macos:
@@ -38,3 +43,6 @@ workflows:
       - lint :
           requires:
             - test
+  checkout_test:
+    jobs:
+      - checkout_project
