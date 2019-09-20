@@ -25,6 +25,7 @@ jobs:
       - run:
           name: install swift lint
           command: brew install swiftlint
+      - checkout
       - run:
           name: run swift lint
           command: fastlane run swiftlint
