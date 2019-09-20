@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run: 
-        command: bundle exec danger --verbose
+          command: bundle exec danger --verbose
   test:
     # Specify the Xcode version to use
     macos:
